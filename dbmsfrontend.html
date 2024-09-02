@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Data Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light grey background */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333; /* Dark grey text */
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc; /* Light grey border */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green submit button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cricket Match Data Form</h2>
+        <form action="dbms.php" method="POST">
+            <label for="match_no">Match Number:</label>
+            <input type="number" id="match_no" name="match_no" required>
+
+            <label for="m_date">Match Date:</label>
+            <input type="date" id="m_date" name="m_date" required>
+
+            <label for="m_timing">Match Timing:</label>
+            <input type="time" id="m_timing" name="m_timing" required>
+
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required>
+
+            <label for="team">Team:</label>
+            <input type="text" id="team" name="team" required>
+
+            <label for="op_team">Opposing Team:</label>
+            <input type="text" id="op_team" name="op_team" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
